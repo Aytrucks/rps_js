@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock paper scissors</h1>
+    <script>
+        
+        function getComputerChoice(){
+            return Math.floor(Math.random()*3);
+        }
+        function getHumanChoice(){
+            let choice = prompt("What weapon do you pick: Rock, Paper, or Scissors?");
+            let weapon;
+            if(choice.toLowerCase() === "rock"){
+                console.log(choice);
+                console.log("Its a rock!");
+                weapon = 0;
+            }
+            else if(choice.toLowerCase() === "paper"){
+                console.log(choice);
+                console.log("Its a paper!");
+                weapon = 1;
+            }
+            else if(choice.toLowerCase() === "scissors"){
+                console.log(choice);
+                console.log("Its a pair of scissors!");
+                weapon = 2;
+            }
+            else{
+                console.log(choice.toLowerCase());
+                console.log("stop cheating");
+            }
+            return weapon;
+        }
+        for(let i = 0; i < 5;i++){
+        const comp_choice = getComputerChoice();
+        console.log(comp_choice);
+        const human_chocie = getHumanChoice();
+       console.log(human_chocie);
+        }
+    </script>
+</body>
+</html>
