@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>Rock paper scissors</h1>
+    <p id="score"></p>
     <script>
         
         function getComputerChoice(){
@@ -104,10 +105,13 @@
 
         if(humanScore > computerScore){
             console.log("The human wins!");
+            document.getElementById("demo").innerHTML = "The human wins!"
         }
         else{
             console.log("The human sucks");
+            document.getElementById("demo").innerHTML = "The human sucks"
         }
+        
     </script>
 </body>
 </html>
